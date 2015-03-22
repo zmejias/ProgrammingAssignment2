@@ -45,12 +45,12 @@ makeCacheMatrix <- function(data_matrix = matrix()) {
 
 cacheSolve <- function(madeMatrix, ...) {
       
-  local_inverse <- madeMatrix$getInverse()  ## assigns the inverse of the madeMatrix
-                                            ## environment to the inverse of this environment 
+  local_inverse <- madeMatrix$getInverse()         ## assigns the inverse of the madeMatrix
+                                                   ## environment to the inverse of this environment 
   
   if(!is.null(local_inverse)) {
-    message("getting cached data")          ## checks if the inverse of the madeMatrix 
-    return(local_inverse)                   ## environment has been calculated before
+    message("getting cached data")                 ## checks if the inverse of the madeMatrix 
+    return(local_inverse)                          ## environment has been calculated before
   }
   else {
     local_data <- madeMatrix$get()
